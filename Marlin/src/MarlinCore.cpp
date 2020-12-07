@@ -884,7 +884,7 @@ void stop() {
  */
 void setup() {
 
-  int relay[] = {P1_30, P0_28, P1_18, P1_19, P1_20, P1_21, P1_22, P1_23};
+  int relay[] = {1,2,3,4,5,6,7,8};// = {P1_30, P0_28, P1_18, P1_19, P1_20, P1_21, P1_22, P1_23};
   int pin_status = 1;
 
   for (int i = 0; i < 8; i++) {
