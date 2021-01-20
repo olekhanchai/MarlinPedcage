@@ -20,7 +20,7 @@ uint8_t LMP91000::read(uint8_t reg){
       Wire.beginTransmission(LMP91000_I2C_ADDRESS);           // START+SLA+W
       Wire.write(reg);                                        // REG
       Wire.endTransmission(false);                            // REP START
-      Wire.requestFrom(LMP91000_I2C_ADDRESS, 1, true);        // SLA+R
+      Wire.requestFrom(LMP91000_I2C_ADDRESS, 1);        // SLA+R
       if(Wire.available()){
             chr = Wire.read();                                // DATA
       }
