@@ -956,6 +956,7 @@ void GcodeSuite::process_parsed_command(const bool no_ok/*=false*/) {
       case 27: P27(); break;
       case 30: P30(); break;
       case 40: P40(); break;
+      case 50: P50(); break;
     }
     break;
 

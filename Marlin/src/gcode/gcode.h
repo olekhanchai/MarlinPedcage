@@ -906,6 +906,7 @@ private:
   static void P27();
   static void P30();
   static void P40();
+  static void P50();
 
   TERN_(SDSUPPORT, static void M1001());
 
