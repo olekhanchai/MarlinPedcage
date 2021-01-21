@@ -27,6 +27,8 @@
   /**
    * P60: NeoPixel Control
    */
+WS2812B strip = WS2812B(16);
+
 void GcodeSuite::P60() {
   int red = 0;
   int green = 0;
@@ -39,7 +41,6 @@ void GcodeSuite::P60() {
 
   if ( (red < 0 || red > 255 ) || (green < 0 || green > 255) || (blue < 0 || blue > 255 )) {SERIAL_ECHO_MSG("Invalid color value!");return;}
 
-  WS2812B strip = WS2812B(total);
   strip.begin();
 
   for(int i=0;i<total;i++){
@@ -48,5 +49,4 @@ void GcodeSuite::P60() {
     strip.setPixelColor(i, strip.Color(red,green,blue)); // Moderately bright green color.
     strip.show(); // This sends the updated pixel color to the hardware.
   }
-
 }
