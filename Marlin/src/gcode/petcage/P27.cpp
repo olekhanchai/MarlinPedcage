@@ -35,6 +35,7 @@ void GcodeSuite::P27() {
   float humidVal = 0.0;
   float temperVal = 0.0;
   int co2Val = 0;     
+ 
   Serial1.print("Q\r\n");
   strcpy(tempbuff, "");
   SERIAL_ECHOPGM(STR_OK);  
@@ -80,4 +81,10 @@ void GcodeSuite::P27() {
   SERIAL_DECIMAL(co2Val);
   SERIAL_EOL();
 //  SERIAL_DECIMAL(abs(rand()*10000));
+  if (humidVal == 0 && temperVal == 0 && co2Val == 0) {
+    // if no valid value re-initial sensor.
+    Serial1.print("G\r\n");
+    Serial1.print("M 04164\r\n");
+    Serial1.print("K 2\r\n"); 
+  }
 }
