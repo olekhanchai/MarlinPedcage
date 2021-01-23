@@ -26,13 +26,13 @@
    * P10: Set Array of Relay on/off
    */
 void GcodeSuite::P10() {
-  int relay[] = {1,2,3,4,5,6,7,8};//= {P1_30, P0_28, P1_18, P1_19, P1_20, P1_21, P1_22, P1_23};
+  int relay[] = {RELAY_1_PIN,RELAY_2_PIN,RELAY_3_PIN,RELAY_4_PIN,RELAY_5_PIN,RELAY_6_PIN,RELAY_7_PIN,RELAY_8_PIN};
   int pin = 1;//P1_30;
   int pin_status = 0;
   if (parser.seenval('R')) pin = parser.value_int() - 1;
   if (pin < 0 || pin > 7 ) {SERIAL_ECHO_MSG("Invalid relay value!");return;}
   if (parser.seenval('S')) pin_status = parser.value_int();
   if (pin_status > 1) pin_status = 1;
-  pinMode(pin, OUTPUT);
+  pinMode(relay[pin], OUTPUT);
   extDigitalWrite(relay[pin], pin_status);
 }

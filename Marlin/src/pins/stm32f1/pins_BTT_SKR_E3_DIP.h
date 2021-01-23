@@ -67,32 +67,41 @@
 //
 // Steppers
 //
-#define X_ENABLE_PIN                        PC7
-#define X_STEP_PIN                          PC6
-#define X_DIR_PIN                           PB15
+#define RELAY_1_PIN                         PC7
+#define RELAY_2_PIN                         PC10
+#define RELAY_3_PIN                         PC6
+#define RELAY_4_PIN                         PB15
+#define RELAY_5_PIN                         PB14
+#define RELAY_6_PIN                         PC11
+#define RELAY_7_PIN                         PB13
+#define RELAY_8_PIN                         PB12
+
+#define X_ENABLE_PIN                        PC5 //PC7
+#define X_STEP_PIN                          PC5 //PC6
+#define X_DIR_PIN                           PC5 //PB15
 #ifndef X_CS_PIN
-  #define X_CS_PIN                          PC10
+  #define X_CS_PIN                          PC5 //PC10
 #endif
 
-#define Y_ENABLE_PIN                        PB14
-#define Y_STEP_PIN                          PB13
-#define Y_DIR_PIN                           PB12
+#define Y_ENABLE_PIN                        PC5 //PB14
+#define Y_STEP_PIN                          PC5 //PB13
+#define Y_DIR_PIN                           PC5 //PB12
 #ifndef Y_CS_PIN
-  #define Y_CS_PIN                          PC11
+  #define Y_CS_PIN                          PC5 //PC11
 #endif
 
-#define Z_ENABLE_PIN                        PB11
-#define Z_STEP_PIN                          PB10
-#define Z_DIR_PIN                           PB2
+#define Z_ENABLE_PIN                        PC5 //PB11
+#define Z_STEP_PIN                          PC5 //PB10
+#define Z_DIR_PIN                           PC5 //PB2
 #ifndef Z_CS_PIN
-  #define Z_CS_PIN                          PC12
+  #define Z_CS_PIN                          PC5 //PC12
 #endif
 
-#define E0_ENABLE_PIN                       PB1
-#define E0_STEP_PIN                         PB0
-#define E0_DIR_PIN                          PC5
+#define E0_ENABLE_PIN                       PC5 //PB1
+#define E0_STEP_PIN                         PC5 //PB0
+#define E0_DIR_PIN                          PC5 //PC5
 #ifndef E0_CS_PIN
-  #define E0_CS_PIN                         PD2
+  #define E0_CS_PIN                         PC5 //PD2
 #endif
 
 //
