@@ -23,9 +23,9 @@
 #include "../../inc/MarlinConfig.h"
 #include "../gcode.h"
   /**
-   * P027: Query current all sensor.
+   * P070: Query current co-zir co2 sensor.
    */
-void GcodeSuite::P27() {
+void GcodeSuite::P70() {
   int incomingByte = 0;
   char buffers[5];
   char tempbuff[100]; 

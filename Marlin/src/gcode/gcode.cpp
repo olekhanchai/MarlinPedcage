@@ -927,37 +927,13 @@ void GcodeSuite::process_parsed_command(const bool no_ok/*=false*/) {
       default: parser.unknown_command_warning(); break;
     }
     case 'P': switch (parser.codenum) {
-      case 1: P1(); break;
-      case 2: P2(); break;
-      case 3: P3(); break;
-      case 4: P4(); break;
-      case 5: P5(); break;
-      case 6: P6(); break;
-      case 7: P7(); break;
-      case 8: P8(); break;
-      case 9: P9(); break;
       case 10: P10(); break;
-      case 11: P11(); break;
-      case 12: P12(); break;
-      case 13: P13(); break;
-      case 14: P14(); break;
-      case 15: P15(); break;
-      case 16: P16(); break;
-      case 17: P17(); break;
-      case 18: P18(); break;
-      case 19: P19(); break;
       case 20: P20(); break;
-      case 21: P21(); break;
-      case 22: P22(); break;
-      case 23: P23(); break;
-      case 24: P24(); break;
-      case 25: P25(); break;
-      case 26: P26(); break;
-      case 27: P27(); break;
       case 30: P30(); break;
       case 40: P40(); break;
       case 50: P50(); break;
       case 60: P60(); break;
+      case 70: P70(); break;      
     }
     break;
 

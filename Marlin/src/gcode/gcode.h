@@ -875,39 +875,14 @@ private:
     static void M1000();
   #endif
 
-
 //Pet cage implementation
-  static void P1();
-  static void P2();
-  static void P3();
-  static void P4();
-  static void P5();
-  static void P6();
-  static void P7();
-  static void P8();
-  static void P9();
   static void P10();
-  static void P11();
-  static void P12();
-  static void P13();
-  static void P14();
-  static void P15();
-  static void P16();
-  static void P17();
-  static void P18();
-  static void P19();
   static void P20();
-  static void P21();
-  static void P22();
-  static void P23();
-  static void P24();
-  static void P25();
-  static void P26();
-  static void P27();
   static void P30();
   static void P40();
   static void P50();
   static void P60();
+  static void P70();
 
   TERN_(SDSUPPORT, static void M1001());
 
