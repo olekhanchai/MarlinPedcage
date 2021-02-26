@@ -36,7 +36,7 @@ void GcodeSuite::P50() {
     Wire.begin();  // join I2C bus
     adc0.initialize(); // initialize ADS1115 16 bit A/D chip
 
-    if(!adc0.testConnection()) SERIAL_ECHO_MSG("ADS1115 connection failed");
+    if(!adc0.testConnection()) SERIAL_ECHO_MSG("error:ADS1115 connection failed");
       
     // To get output from this method, you'll need to turn on the 
     //#define ADS1115_SERIAL_DEBUG // in the ADS1115.h file

@@ -35,7 +35,7 @@ void GcodeSuite::P40() {
 
       if (airSensor.begin() == false)
       {
-            SERIAL_ECHO_MSG("Air sensor not detected. Please check wiring. Freezing...");
+            SERIAL_ECHO_MSG("error:Air sensor not detected. Please check wiring. Freezing...");
       }
       
       if (airSensor.dataAvailable()) {
