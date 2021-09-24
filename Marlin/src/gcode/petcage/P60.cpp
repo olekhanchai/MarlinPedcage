@@ -21,13 +21,15 @@
  */
 
 #include "../../inc/MarlinConfig.h"
-#include "../../feature/WS2812B.h"
+#include "../../feature/Adafruit_NeoPixel.h"
 #include "../gcode.h"
 
   /**
    * P60: NeoPixel Control
    */
-WS2812B strip = WS2812B(16);
+   
+#define NUMPIXELS      64
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUMPIXELS, D3, NEO_GRB + NEO_KHZ800);
 
 void GcodeSuite::P60() {
   int red = 0;
